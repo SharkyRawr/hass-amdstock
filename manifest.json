@@ -1,0 +1,11 @@
+{
+    "domain": "amdstock",
+    "name": "AMD GPU Stock",
+    "config_flow": true,
+    "documentation": "https://catgirl.biz/",
+    "dependencies": [],
+    "codeowners": ["@SharkyRawr"],
+    "requirements": ["httpx", "beautifulsoup4"],
+    "iot_class": "cloud_polling",
+    "version": "0.1.0"
+  }
