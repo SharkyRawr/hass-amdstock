@@ -8,14 +8,6 @@ from .const import DOMAIN
 from .stock import check_stock
 
 
-
-SENSORS = {
-    "stocked": "mdi:emoticon-happy-outline",
-    "n/a": "mdi:emoticon-sad-outline",
-    "recovered": "mdi:emoticon-happy-outline",
-    "deaths": "mdi:emoticon-cry-outline",
-}
-
 async def async_setup_entry(hass, config_entry, async_add_entities):
     coordinator = await get_coordinator(hass)
         
