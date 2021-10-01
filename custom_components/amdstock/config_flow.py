@@ -12,6 +12,8 @@ class AMDStockConfigFlow(config_entries.ConfigFlow):
             self, user_input: dict[str, Any] = None
         ) -> FlowResult:
         errors: dict[str, str] = {}
+
+        # @ todo: select region and stuff
         
         if user_input is not None:
             await self.async_set_unique_id("AMD GPU Stock")
