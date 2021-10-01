@@ -37,7 +37,14 @@ class StockSensor(CoordinatorEntity, SensorEntity):
     @property
     def native_value(self):
         """State of the sensor."""
-        return self.coordinator.data[self._attr_name]['stock']
+        if self.coordinator.data[self._attr_name]['stock'] == 'Out of Stock':
+            return  self.coordinator.data[self._attr_name]['stock']
+        else:
+            return "In Stock"
+
+    @property
+    def state_attributes(self):
+        return dict(stock=self.coordinator.data[self._attr_name]['stock'])
     
     @property
     def device_info(self):
